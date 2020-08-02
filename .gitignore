@@ -8,3 +8,4 @@ dist
 # Extra files
 package-lock.json
 .env
+request.rest

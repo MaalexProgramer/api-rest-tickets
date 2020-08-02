@@ -1,8 +1,20 @@
-# API RESTful Tickets v0.1.0
+# **API RESTful Tickets v0.2.0**
 
-RESTful API with [NodeJs](https://nodejs.org/), [Express], [Sequelize](https://sequelize.org/) and [Mysql](https://www.mysql.com/) to create and assign tickets to users who request them.
+RESTful API with [NodeJs](https://nodejs.org/), [Express](https://expressjs.com/), [Sequelize](https://sequelize.org/) and [Mysql](https://www.mysql.com/) to create and assign tickets to users who request them.
 
 ## New Features!
+
+- Create ticket
+- Update ticket
+- Delete ticket
+- Get all the tickets
+- Get a ticket
+- Get assigned tickets
+- Get unassigned tickets
+- Assign ticket
+- Get tickets from the logged in user
+
+## Features!
 
 - Log in
 - Sign up
@@ -142,4 +154,49 @@ $ PUT api/users/request
 ```sh
 # THIS ROUTE RETURN USERS WHO ARE REQUESTING A TICKET
 $ GET api/users/applicants
+```
+
+```sh
+# THIS ROUTE ALLOWS TO OBTAIN ALL USER TICKETS
+$ GET api/users/tickets
+```
+
+```sh
+# THIS ROUTE ALLOWS TO CREATE A TICKET
+$ POST api/tickets/create
+```
+
+```sh
+# THIS ROUTE ALLOWS TO UPDATE A TICKET IF YOU HAVE NOT ALREADY BEEN ASSIGNED TO A USER
+$ PUT api/tickets/update/:id
+```
+
+```sh
+# THIS ROUTE ALLOWS TO DELETE A TICKET IF YOU HAVE NOT ALREADY BEEN ASSIGNED TO A USER
+$ DELETE api/tickets/delete/:id
+```
+
+```sh
+# THIS ROUTE ALLOWS TO GET ALL THE TICKETS
+$ GET api/tickets/all
+```
+
+```sh
+# THIS ROUTE ALLOWS TO GET A TICKET
+$ GET api/tickets/one/:id
+```
+
+```sh
+# THIS ROUTE ALLOWS TO OBTAIN THE ASSIGNED TICKETS
+$ GET api/tickets/assigned
+```
+
+```sh
+# THIS ROUTE ALLOWS TO OBTAIN NOT ASSIGNED TICKETS
+$ GET api/tickets/notassigned
+```
+
+```sh
+# THIS ROUTE ALLOWS TO ASSIGN A TICKET
+$ PUT api/tickets/toassign/:id
 ```
